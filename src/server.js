@@ -11,7 +11,10 @@ require('dotenv').config();
 const app = express()
 const port = process.env.PORT || 8080;
 
+// Middleware để xử lý dữ liệu từ form HTML
 app.use(express.urlencoded({ extended: true }));
+
+// Middleware để xử lý dữ liệu JSON api
 app.use(express.json());
 app.use(cors({ origin: true }));
 
